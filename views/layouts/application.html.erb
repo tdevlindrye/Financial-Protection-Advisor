@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Financial Protection Advisor</title>
+    <%= csrf_meta_tags %>
+
+	<%= stylesheet_link_tag    'default', media: 'all' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'datepicker', media: 'all' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+
+  <body>
+ 	<nav class="navbar py-md-1 navbar-expand-sm navbar-dark bg-dark">
+ 		<a class="navbar-brand" href="/queries/query_directory">FPA</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+ 			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+	    <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<%= link_to "Search Directory", 'query_directory', :class => "nav-link" %>
+			</li>
+			<% if false %>
+			<li class="nav-item">
+				<%= link_to "Log-in", root_path, :class => "nav-link" %>
+			</li>
+			<% end %>
+    	</ul>
+  	</div>
+	</nav>
+
+	<div id = "main-container" class="container rounded">
+  	<%= yield %>
+	</div>
+  
+  </body>
+</html>

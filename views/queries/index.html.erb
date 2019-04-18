@@ -1,0 +1,57 @@
+
+<h1>Financial Protection Advisor</h1>
+
+<%-#= debug @results -%>
+
+<div class="intro">
+<p>The Consumer Financial Protection Bureau receives hundreds of thousands of consumer
+  complaints about products and services annually.  We've created Financial Protection Advisor
+  to educate consumers about their options when choosing a business to work with, or when
+  applying for a financial product.<br><br>
+  <span>Here are a few of the questions that can be answered by our application:</span>
+  </p>
+  <ul>
+    <li>Which institutions or products and services are the least consumer friendly?</li>
+    <li>Does Company A or Company B receive more complaints about a particular product or service?</li>
+    <li>Are smaller, local institutions more reliable than nationwide corporations?</li>
+    <li>Has a particular institution grown more or less consumer-friendly over the past several years?</li>
+    <li>Are some institutions more likely to maltreat Older Americans or Veterans?</li>
+  </ul>
+  It's time to hold companies accountable for their actions. Click "Enter" to get started!</p>
+</div>
+
+<div class = "text-center">
+  <div class="btn btn-primary">
+    <%= link_to "Enter", 'queries/query_directory', id: 'btn_link' %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<% if false %>
+<form accept-charset="UTF-8" action="/login" method="post">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input name="authenticity_token" type="hidden"
+         value="NNb6+J/j46LcrgYUC60wQ2titMuJQ5lLqyAbnbAUkdo=" />
+  <label for="session_user">Username</label>
+  <input class="form-control" id="session_user"
+         name="session[user]" type="text" />
+  <label for="session_password">Password</label>
+  <input id="session_password" name="session[password]"
+         type="password" />
+  <input class="btn btn-primary" name="commit" type="submit"
+       value="Log in" />
+</form>
+
+<% if @results == 'FAILED' %>
+<div class="alert alert-<%= :danger %>"><%= 'Invalid user/password combination' %></div>
+<% end %>
+
+<%= @results %>
+
+<% end %>

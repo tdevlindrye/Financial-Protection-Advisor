@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Financial Protection Advisor</title>
+    <%= csrf_meta_tags %>
+
+	  <%= stylesheet_link_tag    'default', media: 'all' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class = "landing_pg">
+  	  <div id = "intro-container" class="container rounded">
+    	  <%= yield %>
+	    </div>
+    </div>
+  </body>
+</html>

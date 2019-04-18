@@ -1,0 +1,22 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+
+<form accept-charset="UTF-8" action="/login" method="post">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input name="authenticity_token" type="hidden"
+         value="NNb6+J/j46LcrgYUC60wQ2titMuJQ5lLqyAbnbAUkdo=" />
+  <label for="session_user">Username</label>
+  <input class="form-control" id="session_user"
+         name="session[user]" type="text" />
+  <label for="session_password">Password</label>
+  <input id="session_password" name="session[password]"
+         type="password" />
+  <input class="btn btn-primary" name="commit" type="submit"
+       value="Log in" />
+</form>
+
+<% if @results == 'FAILED' %>
+<div class="alert alert-<%= :danger %>"><%= 'Invalid user/password combination' %></div>
+<% end %>
+
+<%= @results %>
